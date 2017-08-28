@@ -2,6 +2,7 @@ backend:
   name: github
   repo: mrMetalWood/brauselier # Path to your Github repository
   branch: develop # Branch to update
+  base_url: http://develop.brauselier.com
 
 media_folder: "static/images"
 public_folder: "/public/static"
