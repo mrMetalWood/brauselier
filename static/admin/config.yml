@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: mrmetalwood/brauselier # Path to your Github repository
+  repo: mrMetalWood/brauselier # Path to your Github repository
   branch: develop # Branch to update
 
 media_folder: "static/images"
