@@ -1,6 +1,7 @@
 ---
 path: /hello-world
-date: '2017-07-12T17:12:33.962Z'
+date: 2017-08-28T00:00:00+02:00
 title: My First Gatsby Post
 ---
 Oooooh-weeee, my first blog post! hahah
+
