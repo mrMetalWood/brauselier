@@ -2,8 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
-// import '../css/index.css'; // add some style if you want!
-
 export default function Index({data}) {
   const {edges: posts} = data.allMarkdownRemark;
   return (
@@ -12,7 +10,7 @@ export default function Index({data}) {
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({node: post}) => {
           return (
-            <div className="blog-post-preview" key={post.id}>
+            <div key={post.id}>
               <h1>
                 <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>

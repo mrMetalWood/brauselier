@@ -16,6 +16,7 @@ module.exports = {
       options: {
         plugins: [] // just in case those previously mentioned remark plugins sound cool :)
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ]
 };
