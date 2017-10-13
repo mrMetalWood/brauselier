@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 import initGlobalStyles from '../global-styles/index';
 initGlobalStyles();
@@ -11,6 +12,8 @@ initGlobalStyles();
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 170px auto 100px;
 `;
 
 const Wrapper = ({children}) => (
@@ -29,7 +32,8 @@ const Wrapper = ({children}) => (
       ]}
     />
     <Header />
-    {children()}{' '}
+    {children()}
+    <Footer />
   </Container>
 );
 

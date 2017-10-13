@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
+
+const Container = styled.div`display: block;`;
 
 export default function Index({data}) {
   const {edges: posts} = data.allMarkdownRemark;
   return (
-    <div className="blog-posts">
+    <Container>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({node: post}) => {
@@ -19,7 +22,7 @@ export default function Index({data}) {
             </div>
           );
         })}
-    </div>
+    </Container>
   );
 }
 

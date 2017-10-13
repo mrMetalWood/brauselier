@@ -9,7 +9,7 @@ import {
 } from '../../global-styles/variables';
 
 const Container = styled.div`
-  height: 170px;
+  height: 100%; // Pixel height is controlled by grid
   width: 100%;
   background: ${primaryAccentColor};
   display: flex;
