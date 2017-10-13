@@ -19,9 +19,13 @@ const Container = styled.div`
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
 `;
 
-const Logo = styled.img`width: 200px;`;
+const Logo = styled.img`width: 150px;`;
 
-const Subtitle = styled.span`color: ${secondaryFontColor};`;
+const Subtitle = styled.span`
+  color: ${secondaryFontColor};
+  font-weight: 200;
+  margin-top: 4px;
+`;
 
 const Header = () => (
   <Container>

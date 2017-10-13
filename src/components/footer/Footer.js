@@ -9,10 +9,11 @@ import {
 } from '../../global-styles/variables';
 
 const Container = styled.div`
-  height: 100px; // Pixel height is controlled by grid
+  height: 100%; // Pixel height is controlled by grid
   width: 100%;
   background: ${primaryAccentColor};
   color: ${secondaryFontColor};
+  font-weight: 200;
 `;
 
 const Footer = () => <Container>Impressum</Container>;

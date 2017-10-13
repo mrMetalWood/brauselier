@@ -13,7 +13,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 170px auto 100px;
+  grid-template-rows: 85px auto 50px;
 `;
 
 const Wrapper = ({children}) => (

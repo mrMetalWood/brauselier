@@ -5,14 +5,10 @@ import normalizeCss from './normalize-css';
 export default () => injectGlobal`
   ${normalizeCss}
 
-  @font-face {
-    font-family: Verb;
-    src: url('assets/fonts/verbregular-webfont-32kb.woff');
-  }
+  @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
 
-  @font-face {
-    font-family: VerbComp;
-    src: url('assets/fonts/verbcompregular-webfont-30kb.woff');
+  html, body {
+    font-family: 'Oswald', sans-serif;
   }
 
   *, *:before, *:after {
