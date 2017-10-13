@@ -18,4 +18,5 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Article Image", name: "articleImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
