@@ -6,14 +6,21 @@ import styled from 'styled-components';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
+import {stripeBackground, mainMaxWidth} from '../global-styles/variables';
 import initGlobalStyles from '../global-styles/index';
 initGlobalStyles();
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 85px auto 50px;
+  background: ${stripeBackground};
+`;
+
+const Content = styled.div`
+  width: 100vw;
+  max-width: ${mainMaxWidth};
+  justify-self: center;
 `;
 
 const Wrapper = ({children}) => (
@@ -32,7 +39,7 @@ const Wrapper = ({children}) => (
       ]}
     />
     <Header />
-    {children()}
+    <Content>{children()}</Content>
     <Footer />
   </Container>
 );

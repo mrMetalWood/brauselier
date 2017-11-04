@@ -17,6 +17,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+  z-index: 1;
 `;
 
 const Logo = styled.img`width: 150px;`;

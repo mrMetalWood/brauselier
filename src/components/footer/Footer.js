@@ -5,7 +5,9 @@ import logo from '../../images/logo.svg';
 
 import {
   primaryAccentColor,
-  secondaryFontColor
+  secondaryFontColor,
+  mainGrid,
+  mainMaxWidth
 } from '../../global-styles/variables';
 
 const Container = styled.div`
@@ -16,6 +18,23 @@ const Container = styled.div`
   font-weight: 200;
 `;
 
-const Footer = () => <Container>Impressum</Container>;
+const Grid = styled.div`
+  width: 100%;
+  max-width: ${mainMaxWidth};
+  ${mainGrid};
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+`;
+
+const Content = styled.div`grid-column-start: 3;`;
+
+const Footer = () => (
+  <Container>
+    <Grid>
+      <Content>Impressum</Content>
+    </Grid>
+  </Container>
+);
 
 export default Footer;

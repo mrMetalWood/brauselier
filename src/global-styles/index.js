@@ -1,6 +1,7 @@
 import {injectGlobal} from 'styled-components';
 
 import normalizeCss from './normalize-css';
+import {primaryFont} from './variables';
 
 export default () => injectGlobal`
   ${normalizeCss}
@@ -8,7 +9,7 @@ export default () => injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
 
   html, body {
-    font-family: 'Oswald', sans-serif;
+    font-family: ${primaryFont};
   }
 
   *, *:before, *:after {
