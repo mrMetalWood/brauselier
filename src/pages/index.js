@@ -11,7 +11,10 @@ import {
   mainGrid
 } from '../global-styles/variables';
 
-const Container = styled.div`${mainGrid};`;
+const Container = styled.div`
+  ${mainGrid};
+  margin-bottom: 8px;
+`;
 
 const ArticleTeaser = styled(Link)`
   width: 100%;
