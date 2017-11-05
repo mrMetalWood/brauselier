@@ -4,6 +4,7 @@ backend:
   branch: develop # Branch to update
 
 media_folder: "src/pages/posts/static"
+public_folder: ""
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -17,5 +18,4 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Article Image Path", name: "articleImagePath", widget: "string"}
       - {label: "Article Image", name: "articleImage", widget: "image"}
-      - {label: "Test file", name: "testFile", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
