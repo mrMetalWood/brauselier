@@ -118,8 +118,8 @@ export default function Index({data}) {
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({node: post}) => {
           const {id, frontmatter} = post;
-          const {path, articleImage, title} = frontmatter;
-          const {sizes} = articleImage.childImageSharp;
+          const {path, articleImagePath, title} = frontmatter;
+          const {sizes} = articleImagePath.childImageSharp;
 
           return (
             <ArticleTeaser key={id} to={path}>
