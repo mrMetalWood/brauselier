@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import {rgba} from 'polished';
 
 import {
@@ -14,6 +15,7 @@ const Container = styled.div`${mainGrid};`;
 
 const ArticleTeaser = styled(Link)`
   width: 100%;
+  height: 0;
   padding-bottom: 100%;
   position: relative;
   display: block;
@@ -36,19 +38,30 @@ const ArticleTeaserOverlay = styled.div`
   font-weight: 500;
   text-align: center;
   color: ${secondaryFontColor};
+  z-index: 1;
 
   &:hover {
     opacity: 1;
   }
 `;
 
-const ArticleImage = styled.img`
+const ArticleImage = styled(Img)`
+  position: absolute !important;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  vertical-align: middle;
-  position: absolute;
+
+  div {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+    position: absolute;
+  }
 `;
 
 const GreetingContainer = styled.div`
@@ -59,6 +72,7 @@ const GreetingContainer = styled.div`
   background: white;
   grid-column-end: span 12;
   ${mainGrid};
+  color: ${primaryAccentColor};
 
   &:before {
     content: '';
@@ -84,6 +98,9 @@ const GreetingText = styled.p``;
 export default function Index({data}) {
   const {edges: posts} = data.allMarkdownRemark;
 
+  console.log(data);
+  console.log(posts);
+
   return (
     <Container>
       <GreetingContainer>
@@ -102,11 +119,16 @@ export default function Index({data}) {
         .map(({node: post}) => {
           const {id, frontmatter} = post;
           const {path, articleImage, title} = frontmatter;
+          const {sizes} = articleImage.childImageSharp;
 
           return (
             <ArticleTeaser key={id} to={path}>
-              {<ArticleImage src={articleImage} />}
-              {<ArticleTeaserOverlay>{title}</ArticleTeaserOverlay>}
+              <ArticleImage
+                sizes={sizes}
+                style={{background: 'red'}}
+                position="absolute"
+              />
+              <ArticleTeaserOverlay>{title}</ArticleTeaserOverlay>
             </ArticleTeaser>
           );
         })}
@@ -125,7 +147,13 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
-            articleImage
+            articleImage {
+              childImageSharp {
+                sizes(maxWidth: 700) {
+                  ...GatsbyImageSharpSizes_withWebp
+                }
+              }
+            }
           }
         }
       }

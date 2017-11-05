@@ -15,4 +15,9 @@ export default () => injectGlobal`
   *, *:before, *:after {
     box-sizing: border-box;
   }
+
+  .gatsby-image-outer-wrapper {
+    position: initial !important;
+  }
+
 `;

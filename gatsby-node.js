@@ -5,25 +5,27 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
 
-  return graphql(`{
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          html
-          id
-          frontmatter {
-            date
-            path
-            title
+  return graphql(`
+    {
+      allMarkdownRemark(
+        sort: {order: DESC, fields: [frontmatter___date]}
+        limit: 1000
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            html
+            id
+            frontmatter {
+              date
+              path
+              title
+            }
           }
         }
       }
     }
-  }`).then(result => {
+  `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }

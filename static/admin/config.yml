@@ -1,12 +1,10 @@
-publish_mode: editorial_workflow
-
 backend:
   name: github
   repo: mrMetalWood/brauselier # Path to your Github repository
   branch: develop # Branch to update
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: "src/pages/posts"
+public_folder: ""
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
