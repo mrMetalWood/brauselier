@@ -3,7 +3,7 @@ backend:
   repo: mrMetalWood/brauselier # Path to your Github repository
   branch: develop # Branch to update
 
-media_folder: "src/pages/posts/static"
+media_folder: "src/pages/posts/images"
 public_folder: ""
 
 collections:
