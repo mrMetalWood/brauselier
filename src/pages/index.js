@@ -86,20 +86,28 @@ const GreetingContainer = styled.div`
   }
 `;
 
-const GreetingTitle = styled.h3``;
-
 const Greeting = styled.div`
   grid-column-start: 3;
   grid-column-end: span 8;
   z-index: 1;
 `;
-const GreetingText = styled.p``;
+
+const GreetingTitle = styled.h3`
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-weight: 500;
+`;
+
+const GreetingText = styled.p`
+  margin: 0;
+  line-height: 1.4;
+  font-size: 28px;
+  font-weight: 300;
+`;
 
 export default function Index({data}) {
   const {edges: posts} = data.allMarkdownRemark;
-
-  console.log(data);
-  console.log(posts);
 
   return (
     <Container>
@@ -121,13 +129,11 @@ export default function Index({data}) {
           const {path, articleImagePath, title} = frontmatter;
           const {sizes} = articleImagePath.childImageSharp;
 
+          sizes.sizes = '(max-width: 1400px) 30vw, 460px';
+
           return (
             <ArticleTeaser key={id} to={path}>
-              <ArticleImage
-                sizes={sizes}
-                style={{background: 'red'}}
-                position="absolute"
-              />
+              <ArticleImage sizes={sizes} />
               <ArticleTeaserOverlay>{title}</ArticleTeaserOverlay>
             </ArticleTeaser>
           );
@@ -149,7 +155,7 @@ export const pageQuery = graphql`
             path
             articleImagePath {
               childImageSharp {
-                sizes(maxWidth: 700) {
+                sizes {
                   ...GatsbyImageSharpSizes_withWebp
                 }
               }

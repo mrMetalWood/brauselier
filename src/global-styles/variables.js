@@ -18,7 +18,7 @@ const mainGrid = `
   grid-gap: 8px 8px
 `;
 
-const mainMaxWidth = '930px';
+const mainMaxWidth = '1400px';
 
 const primaryFont = `'Oswald', sans-serif`;
 
