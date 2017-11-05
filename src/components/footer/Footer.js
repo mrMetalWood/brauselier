@@ -18,22 +18,19 @@ const Container = styled.div`
   font-weight: 200;
 `;
 
-const Grid = styled.div`
+const Content = styled.div`
   width: 100%;
   max-width: ${mainMaxWidth};
-  ${mainGrid};
   align-items: center;
   margin: 0 auto;
   height: 100%;
+  display: flex;
+  justify-content: center;
 `;
-
-const Content = styled.div`grid-column-start: 3;`;
 
 const Footer = () => (
   <Container>
-    <Grid>
-      <Content>Impressum</Content>
-    </Grid>
+    <Content>Impressum</Content>
   </Container>
 );
 
