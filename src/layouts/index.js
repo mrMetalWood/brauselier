@@ -21,6 +21,7 @@ const Content = styled.div`
   width: 100vw;
   max-width: ${mainMaxWidth};
   justify-self: center;
+  padding: 0 8px;
 `;
 
 const Wrapper = ({children}) => (
