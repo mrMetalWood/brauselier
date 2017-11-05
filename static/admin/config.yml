@@ -15,5 +15,7 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Article Image Path", name: "articleImagePath", widget: "string"}
       - {label: "Article Image", name: "articleImage", widget: "image"}
+      - {label: "Test file", name: "testFile", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown"}
