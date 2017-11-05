@@ -3,8 +3,8 @@ backend:
   repo: mrMetalWood/brauselier # Path to your Github repository
   branch: develop # Branch to update
 
-media_folder: "src/pages/posts"
-public_folder: ""
+media_folder: "src/pages/posts/static"
+public_folder: "./static"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
