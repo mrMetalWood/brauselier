@@ -37,7 +37,7 @@ const ArticleTeaserOverlay = styled.div`
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
-  font-size: 32px;
+  font-size: 64px;
   font-weight: 500;
   text-align: center;
   color: ${secondaryFontColor};
