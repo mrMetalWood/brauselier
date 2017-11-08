@@ -26,19 +26,82 @@ const Content = styled.div`
 
 const Wrapper = ({children}) => (
   <Container>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        {
-          name: 'description',
-          content: 'Sample'
-        },
-        {
-          name: 'keywords',
-          content: 'sample, something'
-        }
-      ]}
-    />
+    <Helmet>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+      />
+      <meta name="description" content="Limonade Rezensionen" />
+      <meta
+        name="keywords"
+        content="Brause, Limonade, Drinks, Rezensionen, Koffein"
+      />
+      <title>Brauselier</title>
+
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="mobile-web-app-capable" content="yes" />
+
+      <meta name="apple-mobile-web-app-title" content="Brauselier" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+      <meta name="msapplication-navbutton-color" content="#ffffff" />
+      <meta name="msapplication-TileColor" content="#4e4c5d" />
+      <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
+      <meta name="msapplication-config" content="browserconfig.xml" />
+
+      <meta name="application-name" content="Brauselier" />
+      <meta name="msapplication-tooltip" content="Brauselier" />
+      <meta name="msapplication-starturl" content="/" />
+
+      <meta name="msapplication-tap-highlight" content="no" />
+
+      <meta name="full-screen" content="yes" />
+      <meta name="browsermode" content="application" />
+
+      <meta name="nightmode" content="enable" />
+
+      <meta name="viewport" content="uc-fitscreen=yes" />
+
+      <meta name="layoutmode" content="fitscreen" />
+
+      <meta name="screen-orientation" content="portrait" />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+
+      <link
+        href="/android-chrome-512x512.png"
+        rel="apple-touch-startup-image"
+      />
+
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4e4c5d" />
+
+      <link href="/android-chrome-512x512.png" rel="icon" sizes="192x192" />
+
+      <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+      <link rel="manifest" href="/manifest.json" />
+    </Helmet>
     <Header />
     <Content>{children()}</Content>
     <Footer />
