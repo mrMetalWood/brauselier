@@ -25,6 +25,7 @@ module.exports = {
         trackingId: 'UA-108093153-1'
       }
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-offline`
   ]
 };
