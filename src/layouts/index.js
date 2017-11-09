@@ -63,8 +63,6 @@ const Wrapper = ({children}) => (
 
       <meta name="nightmode" content="enable" />
 
-      <meta name="viewport" content="uc-fitscreen=yes" />
-
       <meta name="layoutmode" content="fitscreen" />
 
       <meta name="screen-orientation" content="portrait" />

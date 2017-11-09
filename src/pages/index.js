@@ -34,7 +34,7 @@ const ArticleTeaserOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
   font-size: 64px;
