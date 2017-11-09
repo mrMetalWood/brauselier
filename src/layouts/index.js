@@ -31,7 +31,7 @@ const Wrapper = ({children}) => (
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta
         name="viewport"
-        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        content="width=device-width,initial-scale=1,user-scalable=no"
       />
       <meta name="description" content="Limonade Rezensionen" />
       <meta
@@ -58,16 +58,7 @@ const Wrapper = ({children}) => (
 
       <meta name="msapplication-tap-highlight" content="no" />
 
-      <meta name="full-screen" content="yes" />
-      <meta name="browsermode" content="application" />
-
-      <meta name="nightmode" content="enable" />
-
-      <meta name="layoutmode" content="fitscreen" />
-
-      <meta name="screen-orientation" content="portrait" />
-
-      <link
+      {/* <link
         rel="icon"
         type="image/png"
         sizes="32x32"
@@ -79,10 +70,10 @@ const Wrapper = ({children}) => (
         type="image/png"
         sizes="16x16"
         href="/favicon-16x16.png"
-      />
+      /> */}
 
       <link
-        rel="apple-touch-icon"
+        rel="apple-touch-icon-precomposed"
         sizes="180x180"
         href="/apple-touch-icon.png"
       />

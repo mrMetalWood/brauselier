@@ -1,5 +1,6 @@
 {
   "name": "Brauselier",
+  "short_name": "Brauselier",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -12,6 +13,7 @@
       "type": "image/png"
     }
   ],
+  "start_url": "/?utm_source=homescreen",
   "theme_color": "#4e4c5d",
   "background_color": "#4e4c5d",
   "display": "standalone"
