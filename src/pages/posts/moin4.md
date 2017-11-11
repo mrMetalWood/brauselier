@@ -1,5 +1,5 @@
 ---
-path: /moin4
+path: /moin7
 date: 2017-08-17T22:00:00.000Z
 title: MOin
 author: Malte

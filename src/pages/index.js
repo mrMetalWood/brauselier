@@ -49,8 +49,17 @@ export const pageQuery = graphql`
             path
             articleImagePath {
               childImageSharp {
-                sizes(maxWidth: 800, maxHeight: 800, cropFocus: CENTER) {
-                  ...GatsbyImageSharpSizes_withWebp
+                sizes(
+                  maxWidth: 800
+                  maxHeight: 800
+                  cropFocus: CENTER
+                  traceSVG: {
+                    color: "#4E4C5D"
+                    turnPolicy: TURNPOLICY_MINORITY
+                    blackOnWhite: false
+                  }
+                ) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
               }
             }
