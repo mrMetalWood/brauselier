@@ -57,7 +57,7 @@ export const pageQuery = graphql`
         brandInfo
         articleImagePath {
           childImageSharp {
-            sizes {
+            sizes(maxWidth: 800, maxHeight: 800, cropFocus: CENTER) {
               ...GatsbyImageSharpSizes_withWebp
             }
           }

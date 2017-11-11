@@ -9,7 +9,7 @@ import logoPath from '../../images/logo.svg';
 
 const Header = () => (
   <Container>
-    <Logo src={logoPath} />
+    <Logo src={logoPath} alt="Logo des Brauselier Blogs" />
     <Subtitle> Limonade - Rezensionen </Subtitle>
   </Container>
 );
