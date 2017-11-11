@@ -12,15 +12,22 @@ const stripeBackground = `repeating-linear-gradient(
   ${rgba(primaryAccentColor, 0.05)} 10px, ${rgba(primaryAccentColor, 0.05)} 11px
 );`;
 
+const defaultGap = '8px';
+
 const mainGrid = `
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 8px 8px
+  grid-gap: ${defaultGap} ${defaultGap}
 `;
 
 const mainMaxWidth = '1400px';
 
 const primaryFont = `'Oswald', sans-serif`;
+
+const weightExtraLight = 200;
+const weightLight = 300;
+const weightMedium = 500;
+const weightSemiBold = 600;
 
 export {
   primaryAccentColor,
@@ -28,5 +35,10 @@ export {
   mainMaxWidth,
   mainGrid,
   stripeBackground,
-  primaryFont
+  primaryFont,
+  weightExtraLight,
+  weightLight,
+  weightMedium,
+  weightSemiBold,
+  defaultGap
 };
