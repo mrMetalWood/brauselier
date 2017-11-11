@@ -11,5 +11,7 @@ export default styled.div`
   height: 100%; // Pixel height is controlled by grid
   justify-content: center;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+  position: sticky;
+  top: 0;
 `;

@@ -14,7 +14,8 @@ const getArticleTeasers = posts => {
       const {path, articleImagePath, title} = frontmatter;
       const {sizes} = articleImagePath.childImageSharp;
 
-      sizes.sizes = '(max-width: 1400px) 30vw, 460px';
+      sizes.sizes =
+        '(max-width: 736px) 100vw, (max-width: 1024px) 50vw, (max-width: 1400px) 33vw, 460px';
 
       return <Teaser link={path} imageSizes={sizes} title={title} key={id} />;
     });
@@ -53,11 +54,7 @@ export const pageQuery = graphql`
                   maxWidth: 800
                   maxHeight: 800
                   cropFocus: CENTER
-                  traceSVG: {
-                    color: "#4E4C5D"
-                    turnPolicy: TURNPOLICY_MINORITY
-                    blackOnWhite: false
-                  }
+                  traceSVG: {color: "#4E4C5D", blackOnWhite: false}
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
