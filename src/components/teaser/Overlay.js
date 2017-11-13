@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import breakpoint from 'styled-components-breakpoint';
 
 import {secondaryFontColor} from '../../styles/variables';
@@ -12,15 +11,15 @@ export default styled.div`
   left: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   opacity: 1;
   transition: opacity 150ms ease-in-out;
   font-size: 64px;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   color: ${secondaryFontColor};
   z-index: 1;
-  padding: 16px 16px 50px 16px;
+  padding: 16px 40px 40px 40px;
 
   background: linear-gradient(
     to bottom,
@@ -32,6 +31,8 @@ export default styled.div`
     background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 16px;
 
 
